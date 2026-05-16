@@ -16,7 +16,7 @@ If you have any ideas for modern words & their bard-style counterpart, you can c
 -------How to use the translator/converter--------------------------
 
 1. Download the exe file
-2. Double-click on it to run the exe file. Windows Defender/your antivirus probably will flag this a false positive (maybe?), telling you it's from a unknow source and so on, but it's alright, you can run it ✅
+2. Double-click on it to run the exe file. Windows Defender/your antivirus probably will flag this a false positive (maybe?), telling you it's from a unknown source and so on, but it's alright, you can run it ✅
 
 🫡🫡🫡🫡 https://youtu.be/KMTuHpgqnLc?si=GSw5B-xi4eDSOxFI 🔥🔥🔥🔥🔥
 
