@@ -1,19 +1,14 @@
----------------------------------------------------------------------------------------------------------------------------------------
-### Welcome to Shaked'n'Speared Shakespeare style text converter! 
+## <font color="#f79646">Welcome to Shaked'n'Speared Shakespeare style text converter!</font> 
 
-Input your modern English text in & watch it come out shaked & speared (hence the name :)) in the Bard's style.
-
---------Upcoming Updates------------------------------
-- An icon for the app :)
-
+Input your modern English text in & watch it come out Shaked & speared (hence the name :)) in the Bard's style.
+### <font color="#4bacc6">Upcoming Updates</font>
+- ~~An icon for the app :)~~ ✅
 - Convert back from Shakespearean style into regular English
-
--------About Translations.py--------------------------
+### <font color="#4bacc6">About Translations.py</font>
 
 This contains the dictionary that is used to translate modern English into Shakespeare style (and later on, the other way round as well)
 If you have any ideas for modern words & their bard-style counterpart, you can create an issue to tell me (I'll probably think of a better method for feedback soon :))
-
--------How to use the translator/converter--------------------------
+### <font color="#4bacc6">How to use the translator/converter</font>
 
 1. Download the exe file
 2. Double-click on it to run the exe file. Windows Defender/your antivirus probably will flag this a false positive (maybe?), telling you it's from a unknown source and so on, but it's alright, you can run it ✅
