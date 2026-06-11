@@ -5,18 +5,24 @@ from tkinter import messagebox
 #regex module - for better seperating the text, splitting up punctuation attached to words - something .split() can' do
 import re
 
+#file paths
+import os
+import sys
+
 #Translations dictionary
 from Translations import translations
 
 #-----------------------Sub-programs--------------------------------------------------------------
     
 #convert from modern English to shakespeare style English (create the window & allow user to input text to convert)
-def reg2bard():
+def reg2bard(icon):
     app.withdraw()
 
     translator = ctk.CTkToplevel(app)
     translator.title("Convert Normal English to Shakesperean English")
     translator.geometry("700x700")
+
+    translator.iconbitmap(icon)
 
     frame = ctk.CTkFrame(translator)
     frame.pack(expand = True)
@@ -74,16 +80,25 @@ def convert2bard(text, frame, window):
         outputBox.configure(state = "disabled")
 
         #button to convert more text
-        convertBtn = ctk.CTkButton(frame, text = "Convert Another?", font = ("Comic Sans Ms", 16, "bold"), command = reg2bard)
+        convertBtn = ctk.CTkButton(frame, text = "Convert Another?", font = ("Comic Sans Ms", 16, "bold"), command = reg2bard(iconPath))
         convertBtn.grid(row = 2, column = 0, padx = 5, pady = 10)
 
     else:
         return
 
 #convert from shakespeare style English to regular/modern English
-def bard2reg():
+def bard2reg(icon):
     messagebox.showinfo("Coming Soon...", "Coming soon in a future update")
+
+def getFilePaths(icon):
+    try:
+        basePath = sys._MEIPASS #if all the code is bundled into an executable
+    except Exception:
+        basePath = os.path.abspath(".") #gives the folder where the main file is - which is main folder btw
+    
+    return os.path.join(basePath, icon)
 #-----------------------Main Program--------------------------------------------------------------
+iconPath = getFilePaths(os.path.join("shakednspeared.ico"))
 
 #set the appearance mode & theme
 ctk.set_appearance_mode("system")
@@ -94,13 +109,18 @@ app = ctk.CTk()
 app.title("Shaked'n'Speared")
 app.geometry("500x200")
 
+print(iconPath)
+print(os.path.exists(iconPath))
+
+app.iconbitmap(iconPath)
+
 titleLbl = ctk.CTkLabel(app, text = "Shakespeare Text Converter", font = ("Comic Sans Ms", 22))
 titleLbl.pack(pady = 10)
 
-bardBtn = ctk.CTkButton(app, text = "Normal English → Bard English", font = ("Comic Sans Ms", 16, "bold"), command = reg2bard)
+bardBtn = ctk.CTkButton(app, text = "Normal English → Bard English", font = ("Comic Sans Ms", 16, "bold"), command = lambda: reg2bard(iconPath))
 bardBtn.pack(pady = 10)
 
-regEngBtn = ctk.CTkButton(app, text = "Bard English → Normal English", font = ("Comic Sans Ms", 16, "bold"), command = bard2reg)
+regEngBtn = ctk.CTkButton(app, text = "Bard English → Normal English", font = ("Comic Sans Ms", 16, "bold"), command = lambda: bard2reg(iconPath))
 regEngBtn.pack(pady = 10)
 
 app.mainloop()
